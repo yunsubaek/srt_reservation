@@ -28,11 +28,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8.10'  # 원하는 Python 버전으로 변경
-
     - name: Run Python Script
       run: |
-        python3 quickstart.py --user testuser --psw testpwd --dpt ${{ github.event.inputs.departure }} --arr ${{ github.event.inputs.arrival }} --dt ${{ github.event.inputs.date }} --tm ${{ github.event.inputs.time }} --num 2
+        python3 /home/yunsubaek/HDD/srt_reservation/quickstart.py --user testuser --psw testpwd --dpt ${{ github.event.inputs.departure }} --arr ${{ github.event.inputs.arrival }} --dt ${{ github.event.inputs.date }} --tm ${{ github.event.inputs.time }} --num 2
